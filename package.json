@@ -1,31 +1,16 @@
 {
-  "name": "@node-saml/passport-saml",
+  "name": "@foxden/saml-passport",
   "version": "5.1.0",
-  "description": "SAML 2.0 authentication strategy for Passport",
+  "description": "SAML 2.0 authentication strategy for foxden Passport saml",
   "keywords": [
-    "saml",
-    "adfs",
-    "sso",
-    "shibboleth"
+    "saml"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-saml/passport-saml.git"
+    "url": "https://github.com/Foxquilt/foxden-saml-passport.git"
   },
-  "license": "MIT",
-  "author": {
-    "name": "Henri Bergius",
-    "email": "henri.bergius@iki.fi",
-    "url": "http://bergie.iki.fi"
-  },
-  "contributors": [
-    "Michael Bosworth",
-    "Herbert Vojčík",
-    "Peter Loer",
-    "Mark Stosberg",
-    "Chris Barth",
-    "Andrii Kostenko"
-  ],
+  "license": "UNLICENSED",
+  "author": "foxquilt",
   "main": "./lib",
   "files": [
     "lib",

@@ -1,4 +1,4 @@
-# Passport-SAML
+<!-- # Passport-SAML
 
 [![Build Status](https://github.com/node-saml/passport-saml/workflows/Build%20Status/badge.svg)](https://github.com/node-saml/passport-saml/actions?query=workflow%3ABuild%Status)
 [![npm version](https://badge.fury.io/js/@node-saml%2Fpassport-saml.svg)](https://badge.fury.io/js/@node-saml%2Fpassport-saml)

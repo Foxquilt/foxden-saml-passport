@@ -7,7 +7,7 @@ import {
   VerifyWithoutRequest,
   VerifyWithRequest,
 } from "./types";
-import { SAML, SamlConfig } from "@node-saml/node-saml";
+import { SAML, SamlConfig } from '@foxden/saml-node';
 
 export class MultiSamlStrategy extends AbstractStrategy {
   static readonly newSamlProviderOnConstruct = false;

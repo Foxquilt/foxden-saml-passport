@@ -9,7 +9,7 @@ import type {
   PassportSamlConfig,
 } from "./types";
 
-export * from "@node-saml/node-saml";
+export * from "@foxden/saml-node";
 
 export {
   AbstractStrategy,

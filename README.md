@@ -1,4 +1,4 @@
-# Passport-SAML
+<!-- # Passport-SAML
 
 [![Build Status](https://github.com/node-saml/passport-saml/workflows/Build%20Status/badge.svg)](https://github.com/node-saml/passport-saml/actions?query=workflow%3ABuild%Status)
 [![npm version](https://badge.fury.io/js/@node-saml%2Fpassport-saml.svg)](https://badge.fury.io/js/@node-saml%2Fpassport-saml)
@@ -425,4 +425,4 @@ The project continues to be maintained by volunteers. Contributions small and la
 
 ## Copyright Notices
 
-“[OASIS](http://www.oasis-open.org/)”, “SAML”, and “Security Assertion Markup Language” are trademarks of OASIS, the open standards consortium where the SAML specification is owned and developed. SAML is a copyrighted © work of OASIS Open. All rights reserved.
+“[OASIS](http://www.oasis-open.org/)”, “SAML”, and “Security Assertion Markup Language” are trademarks of OASIS, the open standards consortium where the SAML specification is owned and developed. SAML is a copyrighted © work of OASIS Open. All rights reserved. -->

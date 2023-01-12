@@ -1,31 +1,16 @@
 {
-  "name": "@node-saml/passport-saml",
+  "name": "@foxden/saml-passport",
   "version": "4.0.2",
-  "description": "SAML 2.0 authentication strategy for Passport",
+  "description": "SAML 2.0 authentication strategy for foxden Passport saml",
   "keywords": [
-    "saml",
-    "adfs",
-    "sso",
-    "shibboleth"
+    "saml"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-saml/passport-saml.git"
+    "url": "https://github.com/Foxquilt/foxden-saml-passport.git"
   },
-  "license": "MIT",
-  "author": {
-    "name": "Henri Bergius",
-    "email": "henri.bergius@iki.fi",
-    "url": "http://bergie.iki.fi"
-  },
-  "contributors": [
-    "Michael Bosworth",
-    "Herbert Vojčík",
-    "Peter Loer",
-    "Mark Stosberg",
-    "Chris Barth",
-    "Andrii Kostenko"
-  ],
+  "license": "UNLICENSED",
+  "author": "foxquilt",
   "main": "./lib",
   "files": [
     "lib",
@@ -44,14 +29,14 @@
     "prettier-watch": "onchange -k -p 100 \".\" -- prettier --config .prettierrc.json --write {{file}}",
     "prerelease": "git clean -xfd && npm ci && npm test && npm run build",
     "release": "release-it",
-    "test": "npm run prettier-check && npm run lint && npm run tsc && nyc mocha",
+    "test": "npm run lint && npm run tsc && nyc mocha",
     "test-watch": "mocha --watch",
     "tsc": "tsc",
     "tsc-watch": "tsc --watch",
     "watch": "concurrently --kill-others \"npm:*-watch\""
   },
   "dependencies": {
-    "@node-saml/node-saml": "^4.0.0",
+    "@foxden/saml-node": "^4.0.3",
     "@types/express": "^4.17.14",
     "@types/passport": "^1.0.11",
     "@types/passport-strategy": "^0.2.35",

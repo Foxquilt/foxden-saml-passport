@@ -1,6 +1,6 @@
 {
   "name": "@foxden/saml-passport",
-  "version": "4.0.2",
+  "version": "5.1.0",
   "description": "SAML 2.0 authentication strategy for foxden Passport saml",
   "keywords": [
     "saml"

@@ -6,6 +6,7 @@ import type {
   VerifyWithRequest,
   VerifyWithoutRequest,
   MultiStrategyConfig,
+  PassportSamlConfig,
 } from "./types";
 
 export * from "@foxden/saml-node";
@@ -18,4 +19,5 @@ export {
   VerifyWithRequest,
   VerifyWithoutRequest,
   MultiStrategyConfig,
+  PassportSamlConfig,
 };

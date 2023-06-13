@@ -4,6 +4,7 @@ import {
   AuthenticateOptions,
   MultiStrategyConfig,
   RequestWithUser,
+  PassportSamlConfig,
   VerifyWithoutRequest,
   VerifyWithRequest,
 } from "./types";
@@ -11,7 +12,7 @@ import { SAML, SamlConfig } from "@foxden/saml-node";
 
 export class MultiSamlStrategy extends AbstractStrategy {
   static readonly newSamlProviderOnConstruct = false;
-  _options: SamlConfig & MultiStrategyConfig;
+  _options: PassportSamlConfig & MultiStrategyConfig;
 
   constructor(
     options: MultiStrategyConfig,
@@ -33,7 +34,7 @@ export class MultiSamlStrategy extends AbstractStrategy {
     // and there are defaults for all `strategy`-required options.
     const samlConfig = {
       ...options,
-    } as SamlConfig & MultiStrategyConfig;
+    } as PassportSamlConfig & MultiStrategyConfig;
 
     super(samlConfig, signonVerify, logoutVerify);
     this._options = samlConfig;

@@ -6,7 +6,7 @@ orbs:
 
 aliases:
   - &node-install-config
-    node-version: '22'
+    node-version: "22"
 
 jobs:
   test:
@@ -24,7 +24,7 @@ jobs:
           command: |
             npm run lint
             npm run build
-            npm run test 
+            npm run test
       - store_test_results:
           path: ./reports/
       - store_artifacts:

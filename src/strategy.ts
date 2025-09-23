@@ -104,7 +104,7 @@ export abstract class AbstractStrategy extends PassportStrategy {
 
             // Log out the current user no matter if we can verify the logged in user === logout requested user
             await new Promise((resolve, reject) => {
-              req.logout((err) => {
+              req.logout((err: Error) => {
                 if (err) {
                   return reject(err);
                 }
@@ -173,17 +173,17 @@ export abstract class AbstractStrategy extends PassportStrategy {
       this._saml
         .validateRedirectAsync(req.query, originalQuery)
         .then(validateCallback)
-        .catch((err) => this.error(err));
+        .catch((err: Error) => this.error(err));
     } else if (req.body?.SAMLResponse) {
       this._saml
         .validatePostResponseAsync(req.body)
         .then(validateCallback)
-        .catch((err) => this.error(err));
+        .catch((err: Error) => this.error(err));
     } else if (req.body?.SAMLRequest) {
       this._saml
         .validatePostRequestAsync(req.body)
         .then(validateCallback)
-        .catch((err) => this.error(err));
+        .catch((err: Error) => this.error(err));
     } else {
       const requestHandler = {
         "login-request": async () => {
@@ -237,7 +237,7 @@ export abstract class AbstractStrategy extends PassportStrategy {
     this._saml
       .getLogoutUrlAsync(req.user as Profile, RelayState, {})
       .then((url) => callback(null, url))
-      .catch((err) => callback(err));
+      .catch((err: Error) => callback(err));
   }
 
   protected _generateServiceProviderMetadata(

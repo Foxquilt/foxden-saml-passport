@@ -29,7 +29,7 @@
     "prettier-watch": "npm run prettier-format && onchange -k -p 100 \".\" -- prettier --config .prettierrc.json --write {{file}}",
     "prerelease": "git clean -xfd && npm ci && npm run lint && npm test && npm run build",
     "release": "release-it",
-    "test": "npm run tsc && nyc mocha",
+    "test": "npm run prettier-check && npm run lint && npm run tsc && nyc mocha",
     "test-watch": "mocha --watch",
     "tsc": "tsc",
     "tsc-watch": "tsc --watch",
@@ -39,7 +39,7 @@
     "watch": "concurrently --kill-others \"npm:*-watch\""
   },
   "dependencies": {
-    "@foxden/saml-node": "^5.1.0",
+    "@foxden/node-saml": "^5.1.0",
     "@types/express": "^4.17.23",
     "@types/passport": "^1.0.17",
     "@types/passport-strategy": "^0.2.38",

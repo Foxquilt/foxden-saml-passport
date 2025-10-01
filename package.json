@@ -1,6 +1,6 @@
 {
   "name": "@foxden/saml-passport",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "SAML 2.0 authentication strategy for foxden Passport saml",
   "keywords": [
     "saml"
@@ -39,8 +39,8 @@
     "watch": "concurrently --kill-others \"npm:*-watch\""
   },
   "dependencies": {
-    "@foxden/node-saml": "^5.1.0",
-    "@types/express": "^4.17.23",
+    "@foxden/node-saml": "^5.1.1",
+    "@types/express": "^5.0.3",
     "@types/passport": "^1.0.17",
     "@types/passport-strategy": "^0.2.38",
     "passport": "^0.7.0",

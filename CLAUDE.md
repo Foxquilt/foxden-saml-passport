@@ -29,9 +29,9 @@ yarn watch
 
 ## Architecture
 
-This is a published npm library (`@foxden/saml-passport`, `main: ./lib`). It is a Foxquilt fork of the upstream `@node-saml/passport-saml` package, adapted to use the internal `@foxden/saml-node` package instead of `@node-saml/saml-core`.
+This is a published npm library (`@foxden/saml-passport`, `main: ./lib`). It is a Foxquilt fork of the upstream `@node-saml/passport-saml` package, adapted to use the internal `@foxden/node-saml` package instead of `@node-saml/saml-core`.
 
-**Key difference from upstream:** The SAML core logic lives in `@foxden/saml-node` (a separate repo: `foxden-node-saml`), not in this repo. This repo only contains the Passport.js strategy wrappers.
+**Key difference from upstream:** The SAML core logic lives in `@foxden/node-saml` (a separate repo: `foxden-node-saml`), not in this repo. This repo only contains the Passport.js strategy wrappers.
 
 ## Source Files (`src/`)
 

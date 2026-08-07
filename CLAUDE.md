@@ -37,7 +37,7 @@ This is a published npm library (`@foxden/saml-passport`, `main: ./lib`). It is 
 
 ```
 src/
-  index.ts             # Public exports: Strategy, AbstractStrategy, MultiSamlStrategy + re-exports from @foxden/saml-node
+  index.ts             # Public exports: Strategy, AbstractStrategy, MultiSamlStrategy + re-exports from @foxden/node-saml
   strategy.ts          # AbstractStrategy (base) + Strategy (concrete) — single-provider SAML
   multiSamlStrategy.ts # MultiSamlStrategy — dynamic multi-provider SAML via getSamlOptions callback
   types.ts             # TypeScript types: VerifiedCallback, VerifyWithRequest, VerifyWithoutRequest, MultiStrategyConfig, etc.
@@ -47,7 +47,8 @@ src/
 
 - Framework: **Mocha** (not Jest) + Chai assertions + Sinon stubs
 - Coverage: **nyc** (Istanbul), config in `.nycrc.json` — reporters: `lcov` + `text`
-- Test files: `test/strategy.spec.ts`, `test/multiSamlStrategy.spec.ts`
+- Test files: `test/strategy.spec.ts`, `test/multiSamlStrategy.spec.ts` — both use fixtures from `test/types.ts` (shared certs) and `test/static/`
+- Mocha config lives in `.mocharc.json` (spec glob `test/**/*.spec.ts`, requires `choma` + `ts-node/register`)
 - Run with: `yarn test` (runs lint + tsc + `nyc mocha`)
 
 ## Key Design Patterns

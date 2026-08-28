@@ -14,7 +14,7 @@ yarn test
 # Run only mocha tests (skips lint/tsc)
 yarn test-watch   # watch mode
 
-# Type check without emit
+# Type check (identical to `yarn build` — tsconfig.json has no noEmit, so this also emits to lib/)
 yarn tsc
 
 # Coverage report (lcov + text)

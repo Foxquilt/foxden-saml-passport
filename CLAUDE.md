@@ -11,8 +11,12 @@ yarn build
 # Run all checks: lint + tsc typecheck + mocha tests with nyc coverage
 yarn test
 
-# Run only mocha tests (skips lint/tsc)
-yarn test-watch   # watch mode
+# Run only mocha tests (skips lint/tsc), in watch mode
+yarn test-watch
+
+# Lint (ESLint + prettier check) / auto-fix (ESLint on src + prettier write)
+yarn lint
+yarn lint:fix
 
 # Type check (identical to `yarn build` — tsconfig.json has no noEmit, so this also emits to lib/)
 yarn tsc
@@ -20,7 +24,7 @@ yarn tsc
 # Coverage report (lcov + text)
 # nyc wraps mocha automatically via `yarn test`
 
-# Release (cleans, reinstalls, tests, builds, then release-it)
+# Release (git clean, `npm ci`, lint, tests, build; then release-it)
 yarn prerelease && yarn release
 
 # Watch modes (runs all *-watch scripts concurrently)
@@ -58,6 +62,10 @@ src/
 - `MultiSamlStrategy` sets `static newSamlProviderOnConstruct = false` — defers `SAML` instantiation to each `authenticate()` call, creating a new instance per request via `getSamlOptions`
 - Both strategies accept two verify functions: `signonVerify` (SSO) and `logoutVerify` (SLO)
 - `passReqToCallback` option toggles between `VerifyWithRequest` and `VerifyWithoutRequest` signatures
+
+## CI
+
+`.circleci/config.yml` runs `npm run lint`, `npm run build` and `npm run test` on every build, and publishes with `npm publish`. `.github/workflows/workflow.yml` also runs the build/test on Node 18, 20 and latest for pushes and PRs to master (plus CodeQL and a stale-bot).
 
 ## Publishing
 

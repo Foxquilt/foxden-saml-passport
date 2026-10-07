@@ -41,10 +41,10 @@ This is a published npm library (`@foxden/saml-passport`, `main: ./lib`). It is 
 
 ```
 src/
-  index.ts             # Public exports: Strategy, AbstractStrategy, MultiSamlStrategy + re-exports from @foxden/node-saml
+  index.ts             # Public exports: Strategy, AbstractStrategy, MultiSamlStrategy, the verify/config types + re-exports from @foxden/node-saml
   strategy.ts          # AbstractStrategy (base) + Strategy (concrete) — single-provider SAML
   multiSamlStrategy.ts # MultiSamlStrategy — dynamic multi-provider SAML via getSamlOptions callback
-  types.ts             # TypeScript types: VerifiedCallback, VerifyWithRequest, VerifyWithoutRequest, MultiStrategyConfig, etc.
+  types.ts             # TypeScript types: VerifiedCallback, VerifyWithRequest, VerifyWithoutRequest, MultiStrategyConfig, PassportSamlConfig, etc.
 ```
 
 ## Testing
